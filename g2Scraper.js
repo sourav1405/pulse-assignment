@@ -1,19 +1,17 @@
-import express from "express";
+
 import puppeteer from "puppeteer-extra";
 import StealthPlugin from "puppeteer-extra-plugin-stealth";
 import { format } from "date-fns";
 
 puppeteer.use(StealthPlugin());
 
-const app = express();
-const PORT = 3000;
 
 // Universal wait function
 async function wait(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-async function scrapeAllG2Reviews(productUrl, startDate, endDate) {
+export async function scrapeG2Reviews(productUrl, startDate, endDate) {
   console.log(" Starting G2 scraping...");
   console.log(` Date range: ${startDate} → ${endDate}`);
   console.log(` Product URL: ${productUrl}`);
@@ -118,25 +116,5 @@ async function scrapeAllG2Reviews(productUrl, startDate, endDate) {
   return filteredReviews;
 }
 
-app.get("/g2-reviews", async (req, res) => {
-  try {
-    const { url, start, end } = req.query;
-    if (!url || !start || !end) {
-      console.log("⚠ Missing required query params.");
-      return res
-        .status(400)
-        .json({ error: "Missing required query params: url, start, end" });
-    }
 
-    console.log(" Incoming request to /g2-reviews");
-    const data = await scrapeAllG2Reviews(url, start, end);
-    res.json({ count: data.length, reviews: data });
-  } catch (err) {
-    console.error(" Scraping failed:", err.message);
-    res.status(500).json({ error: "Scraping failed", details: err.message });
-  }
-});
 
-app.listen(PORT, () =>
-  console.log(` Server running on http://localhost:${PORT}`)
-);
