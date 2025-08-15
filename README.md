@@ -26,3 +26,7 @@ I explored multiple approaches to achieve the goal within limited time.
 ---
 **Status:** Prototype using mock data
 
+##How to run
+You have to do npm start and the it will start the server in local 
+##Link: http://localhost:3000/reviews?company=Zoom&start=2024-01-01&end=2024-07-31&source=all
+
