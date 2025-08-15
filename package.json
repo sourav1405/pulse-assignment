@@ -1,0 +1,18 @@
+{
+  "name": "pulse-scraper",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "API to scrape SaaS reviews from G2, Capterra, and GetApp with date filtering and pagination.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "NODE_ENV=development node server.js"
+  },
+  "dependencies": {
+    "date-fns": "^4.1.0",
+    "express": "^4.21.2",
+    "puppeteer": "^22.15.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  }
+}

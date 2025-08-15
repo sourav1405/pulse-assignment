@@ -1,0 +1,38 @@
+[
+  {
+    "source": "g2",
+    "title": "Great for meetings",
+    "description": "Zoom makes remote meetings easy and reliable.",
+    "date": "2024-06-18",
+    "reviewer": "Jane Doe",
+    "rating": "5",
+    "company": "Zoom"
+  },
+  {
+    "source": "capterra",
+    "title": "Good video quality",
+    "description": "We use Zoom for daily standups and it works well.",
+    "date": "2024-05-10",
+    "reviewer": "John Smith",
+    "rating": "4",
+    "company": "Zoom"
+  },
+  {
+    "source": "getapp",
+    "title": "Easy to use",
+    "description": "User-friendly interface and quick setup.",
+    "date": "2024-07-01",
+    "reviewer": "Aditi P",
+    "rating": "5",
+    "company": "Zoom"
+  },
+  {
+    "source": "g2",
+    "title": "Solid but needs improvements",
+    "description": "Screen sharing could be smoother.",
+    "date": "2023-12-15",
+    "reviewer": "Chris L",
+    "rating": "3",
+    "company": "Zoom"
+  }
+]
